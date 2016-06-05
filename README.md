@@ -3,10 +3,10 @@ ZipManager class will zip or unzip large zip archives super fast using native pr
 
 in AS3, there are many different zip libraries which will do the same thing but they are not good enough when it comes to mobile usage because of the following reasons:
 
-– They load the whole zip into runtime and then try to zip/unzip reading bytes which is too time consuming
-– loading a big zip file using AS3 libraries will fail on mobile devices because it takes too much RAM
-– AS workers are not yet supported on iOS and your Air UI will freez untill the process is finished!
-– the bottom line is that AS3 libs for handling zip files are TOO slow and not practical
+â€“ They load the whole zip into runtime and then try to zip/unzip reading bytes which is too time consuming
+â€“ loading a big zip file using AS3 libraries will fail on mobile devices because it takes too much RAM
+â€“ AS workers are not yet supported on iOS and your Air UI will freez untill the process is finished!
+â€“ the bottom line is that AS3 libs for handling zip files are TOO slow and not practical
 
 using this extension will solve all the above problems. you will be amazed how fast it works no matter the size of the zip file. we tested with a ~1GB zip archive and it worked just fine :) 
 
@@ -61,6 +61,9 @@ function onComplete(e:ZipManagerEvent):void
     <extensionID>com.myflashlab.air.extensions.zipManager</extensionID>
   </extensions>
 ```
+
+# Loading from File.applicationDirectory - where it is returned empty on android, but actually contains files
+which names have to be know in advance.
 
 # Requirements
 * Android SDK 10 or higher
